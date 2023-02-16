@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /*
  * main: function is the entry point of the program.
  * It prints a message to the console and returns 0 to indicate success.
