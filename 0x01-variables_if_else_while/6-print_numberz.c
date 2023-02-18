@@ -1,16 +1,18 @@
 #include <stdio.h>
 /**
- * main - prints all single digit numbers of base 10 from 1-0 WithoutUsingChar
+ * main - prints all single digit numbers of base 10 starting from 0 WithoutUsingChar
  * Return: Always 0 (Success)
  */
 int main(void)
 {
 	int i;
 
-	for (i = 0; i < 10; i++)
+	i = 0;
+	while (i < 10)
 	{
-		putchar(i / 10 + '0');
-		putchar(i % 10 );
+		putchar(i + '0');
+		i++;
 	}
+	putchar('\n');
 	return (0);
 }
