@@ -12,6 +12,7 @@ int main(void)
 	{
 		putchar(i + '0');
 		putchar(44);
+		putchar(32);
 		i++;
 	}
 	putchar('\n');
