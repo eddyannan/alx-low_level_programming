@@ -1,2 +1,2 @@
 #!/bin/bash
-export CFILE=0-main.c ; ./100-intel
+CFILE=main.c; main=${CFILE%.*}; gcc -S -masm=intel $CFILE && mv ${main}.c $main.s
