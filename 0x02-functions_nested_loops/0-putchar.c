@@ -3,7 +3,8 @@
  * main - prints out _putchar
  * Return: Always 0 (Success)
  */
-int main(void){
+int main(void)
+{
 		putchar(95);
 		putchar(112);
 		putchar(117);
@@ -15,4 +16,3 @@ int main(void){
 		putchar('\n');
 		return (0);
 }
-
