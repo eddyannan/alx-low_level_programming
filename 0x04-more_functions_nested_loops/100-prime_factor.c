@@ -1,27 +1,31 @@
-#include <stdio.h>
-typedef long long ll; /*define a custom type for long long integers*/
-
+#include "stdio.h"
 /**
- * main - print the largest prime factor
- * Return: Always 0.
- */
-
+* main - largest prime factor of 612852475143
+*
+* Return: 0
+*/
 int main(void)
 {
-	ll number = 612852475143; /*use LL to indicate a long long integer*/
-	ll factor = 2; /*start with smallest prime factor*/
+long int x, i, pf;
 
-	while (number > 1)
-	{/* keep going until number is completely factored*/
-		if (number % factor == 0)
-		{/* found a factor*/
-			number /= factor; /*divide by the factor*/
-		} else
-		{/*factor is not a divisor*/
-			factor++; /*try the next factor*/
-		}
-	}
+pf = -1;
+x = 612852475143;
 
-	printf("%lld\n", factor); /*print the largest prime factor*/
-	return (0);
+while (x % 2 == 0)
+{
+pf = 2;
+x = x / 2;
+}
+for (i = 3; i <= x / 2; i = i + 2)
+{
+while (x % i == 0)
+{
+pf = i;
+x = x / i;
+}
+}
+if (x > 2)
+pf = x;
+printf("%ld\n", pf);
+return (0);
 }
