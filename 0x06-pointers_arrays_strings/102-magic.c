@@ -1,5 +1,4 @@
 #include <stdio.h>
-/* main - prints out an integer */
 int main(void)
 {
 int n;
