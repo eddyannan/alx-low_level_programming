@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 /**
  * print_chessboard - a function that prints a chessboard
  * @a: array pointer
