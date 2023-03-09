@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 /**
  * is_palindrome -  returns 1 if a string is a palindrome and 0 if not
  * @s: pointer to char s
@@ -6,35 +7,29 @@
  */
 int is_palindrome(char *s)
 {
-	char *end;
+	int len = strlen(s);
 
-	if (*s == '\0')
-	{
-	/* empty string is a palindrome */
-		return (1);
-	}
-	end = s;
+	int result;
 
-	while (*end != '\0')
+	if (len <= 1)
 	{
-	/* find the end of the string */
-	end++;
+	/* base case: string is empty or has only one character */
+	return (1);
 	}
-	/* back up to the last character */
-	end--;
-	while (s < end)
-	{
-	/* compare characters from start to end */
-	if (*s != *end)
+	if (*s == *(s + len - 1))
+{
+	/* null terminate the string temporarily */
+	*(s + len - 1) = '\0';
+	/* recursive call with shortened string */
+	result = is_palindrome(s + 1);
+
+	/* restore the original character */
+	*(s + len - 1) = *(s + len);
+	return (result);
+	}
+	else
 	{
 	/* not a palindrome */
 	return (0);
 	}
-	/* move the start pointer forward */
-	s++;
-	/* move the end pointer backward */
-	end--;
-	}
-	/* palindrome */
-	return (1);
 }
