@@ -11,6 +11,12 @@
 int sqrt_helper(int n, int start, int end);
 
 /* Returns the square root of n if it is a perfect square, else returns -1 */
+/**
+ * _sqrt_recursion - the square root of n if it is a perfect square
+ * @n: int n
+ * Return: return void
+ */
+
 int _sqrt_recursion(int n)
 {
 	/* Edge case: If n is negative, there is no natural square root */
@@ -22,6 +28,14 @@ int _sqrt_recursion(int n)
 	return (sqrt_helper(n, 1, n));
 }
 /* Recursive helper function to find the square root using binary search */
+/**
+ * sqrt_helper - function returns value of x raised to the power of y
+ * @n: int n
+ * @start: start int
+ * @end: end int
+ * Return: return void
+ */
+
 int sqrt_helper(int n, int start, int end)
 {
 	int mid;
@@ -31,7 +45,7 @@ int sqrt_helper(int n, int start, int end)
 	return (-1);
 	}
 	/* Calculate the middle point */
-	int mid = (start + end) / 2;
+	mid = (start + end) / 2;
 
 	/* If the middle point is the square root, return it */
 	if (mid * mid == n)
